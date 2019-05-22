@@ -1,10 +1,14 @@
-# Pull tomcat as base image.
- 	FROM hajira/tomcat1:latest
- 	 
- 	# update
+FROM hajira/tomcat1
+
+MAINTAINER hajira
+
+# update
  	RUN apt-get update -y
  	 
  	# Install Java
  	RUN apt-get install default-jre -y
- 	 
- 	COPY target/*.war /usr/local/tomcat/webapps/
+
+COPY target/*.war /usr/local/tomcat/webapps/
+
+
+
