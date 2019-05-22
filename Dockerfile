@@ -1,5 +1,5 @@
 # Pull tomcat as base image.
- 	FROM Hajira/tomcat1:latest
+ 	FROM hajira/tomcat1:latest
  	 
  	# update
  	RUN apt-get update -y
